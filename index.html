@@ -349,6 +349,13 @@ Taqiaden is a Postdoctoral Researcher at Shanghai Jiao Tong University's School 
       }
 
       update_isotope();
+
+      // Re-layout once all images (movie posters) have loaded,
+      // so Isotope measures correct item heights and avoids overlap.
+      $(window).on('load', function () {
+        $grid.isotope('layout');
+      });
+
 // Auto-number movie ranks based on DOM order
       document.querySelectorAll('.list-item.Movie .movie-title').forEach(function (el, i) {
         el.textContent = '#' + (i + 1) + ' — ' + el.textContent;

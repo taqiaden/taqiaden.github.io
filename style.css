@@ -184,7 +184,16 @@ h2 {
   width: 100%;
   line-height: 1em;
   margin-top: 1em;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
 }
+
+.list-item .thumbnail { flex: 0 0 180px; }
+.list-item .thumbnail img { width: 180px; height: auto; display: block; }
+.list-item .project-description { flex: 1 1 auto; min-width: 0; }
 
 .list-item p.date {
   display: inline-block;
