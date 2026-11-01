@@ -1,250 +1,76 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
 
-    <!-- Title -->
-    <title>Taqiaden ALshameri</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1000">
+<head>
 
-    <!-- Isotope JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <!-- Title -->
+  <title>Taqiaden ALshameri</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1000">
 
-    <!-- Custom Style -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Isotope JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-    </style>
-  </head>
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="style.css">
 
-  <body id="body">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+  </style>
+</head>
 
-    <div id="main">
-      <div id="intro">
-        <div id="intro-text">
-          <h1>Taqiaden Alshameri</h1>
-          <p>
-Taqiaden is a Postdoctoral Researcher at Shanghai Jiao Tong University's School of Automation and Intelligent Sensing. His research focuses on robot learning and reinforcement learning, grasping and dexterous manipulation, and embodied intelligence.
-            <div id="more-bio" style="display: none">
-              <br>
-              <p>A fighter who seeks to conquer real-life problems with creative algorithms. Always straightforward to the point with minimal resource utilization. Experienced Scholar and Mechanical Engineer with a proven track record in design and automation, robotics systems, CAD modeling, deep learning, optimization algorithms, and developing computerized solutions. </p>
-            </div>
-            <br>
-            <a href="javascript:toggle_bio()">Bio</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://github.com/taqiaden">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://grabcad.com/taqiaden-1">GrabCAD</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://huggingface.co/taqiaden">Hugging Face</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://x.com/taqiaden">X</a>
-            <br><br>
-            <br><br>
-          </p>
+<body id="body">
+
+  <div id="main">
+    <div id="intro">
+      <div id="intro-text">
+        <h1>Taqiaden Alshameri</h1>
+        <p>
+          Taqiaden is a Postdoctoral Researcher at Shanghai Jiao Tong University's School of Automation and Intelligent
+          Sensing. His research focuses on robot learning and reinforcement learning, grasping and dexterous
+          manipulation, and embodied intelligence.
+        <div id="more-bio" style="display: none">
+          <br>
+          <p>A fighter who seeks to conquer real-life problems with creative algorithms. Always straightforward to the
+            point with minimal resource utilization. Experienced Scholar and Mechanical Engineer with a proven track
+            record in design and automation, robotics systems, CAD modeling, deep learning, optimization algorithms, and
+            developing computerized solutions. </p>
         </div>
-        <div id="intro-image">
-          <img src="images/profile.jpg">
-        </div>
+        <br>
+        <a href="javascript:toggle_bio()">Bio</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/taqiaden">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://grabcad.com/taqiaden-1">GrabCAD</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://huggingface.co/taqiaden">Hugging Face</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://x.com/taqiaden">X</a>
+        <br><br>
+        <br><br>
+        </p>
       </div>
-
-      <div id="filters" class="button-group">
-        <!-- <button class="button" data-filter="*">Show All</button> -->
-        <button class="button" data-filter=".highlight">Highlights</button>
-        <button class="button is-checked" data-filter=".Movie">My Film Shortlist</button>
-        <button class="button" data-filter=".publication">Research</button>
+      <div id="intro-image">
+        <img src="images/profile.jpg">
       </div>
+    </div>
 
-      <div class="grid">
+    <div id="filters" class="button-group">
+      <!-- <button class="button" data-filter="*">Show All</button> -->
+      <button class="button" data-filter=".highlight">Highlights</button>
+      <button class="button is-checked" data-filter=".Movie">My Film Shortlist</button>
+      <button class="button" data-filter=".publication">Research</button>
+    </div>
 
-
-       <!-- Truncated Set of Highlights (Shown by Default) -->
-        <div id="main-highlights">
-
-          <div class="list-item highlight" data-category="highlight">
-            <div class="project-description">
-              <h3>Demo 1</h3>
-              <iframe width="320" height="180"
-                      src="https://www.youtube.com/embed/xBuanLjSncA"
-                      title="Demo 1"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen></iframe>
-            </div>
-          </div>
-
-          <div class="list-item highlight" data-category="highlight">
-            <div class="project-description">
-              <h3>Demo 2</h3>
-              <iframe width="320" height="180"
-                      src="https://www.youtube.com/embed/_r1BAmj_31o"
-                      title="Demo 2"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen></iframe>
-            </div>
-          </div>
-
-          <div class="list-item highlight" data-category="highlight">
-            <div class="project-description">
-              <h3>Demo 3</h3>
-              <iframe width="320" height="180"
-                      src="https://www.youtube.com/embed/OhyEVtTZgt0"
-                      title="Demo 3"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen></iframe>
-            </div>
-          </div>
-
-        </div>
-
-          
-                  
-        <!-- ===== MY TOP MOVIES ===== -->
-        <div class="list-item Movie" data-category="Movie">
-          <a href="https://www.imdb.com/title/tt0816692/" class="thumbnail">
-            <img src="images/Interstellar.jpeg" width="180px" alt="Interstellar poster">
-          </a>
-          <div class="project-description">
-            <h3><a href="https://www.imdb.com/title/tt0816692/" class="movie-title">Interstellar</a></h3>
-            <p>
-              2014<br>
-              <i>Adventure, Drama, Sci-Fi</i>
-            </p>
-          </div>
-        </div>
-
-        <div class="list-item Movie" data-category="Movie">
-          <a href="https://www.imdb.com/title/tt1130884/" class="thumbnail">
-            <img src="images/Shutter_Island.jpeg" width="180px" alt="Shutter Island poster">
-          </a>
-          <div class="project-description">
-            <h3><a href="https://www.imdb.com/title/tt1130884/" class="movie-title">Shutter Island</a></h3>
-            <p>
-              2010<br>
-              <i>Mystery, Thriller</i>
-            </p>
-          </div>
-        </div>
-
-        <div class="list-item Movie" data-category="Movie">
-          <a href="https://www.imdb.com/title/tt0468569/" class="thumbnail">
-            <img src="images/The_Dark_Knight.avif" width="180px" alt="The Dark Knight poster">
-          </a>
-          <div class="project-description">
-            <h3><a href="https://www.imdb.com/title/tt0468569/" class="movie-title">The Dark Knight</a></h3>
-            <p>
-              2008<br>
-              <i>Action, Crime, Drama</i>
-            </p>
-          </div>
-        </div>
-
-        <div class="list-item Movie" data-category="Movie">
-          <a href="https://www.imdb.com/title/tt0167404/" class="thumbnail">
-            <img src="images/The_Sixth_Sense.jpeg" width="180px" alt="The Sixth Sense poster">
-          </a>
-          <div class="project-description">
-            <h3><a href="https://www.imdb.com/title/tt0167404/" class="movie-title">The Sixth Sense</a></h3>
-            <p>
-              1999<br>
-              <i>Drama, Mystery, Thriller</i>
-            </p>
-          </div>
-        </div>
+    <div class="grid">
 
 
-
-        <div class="list-item Movie" data-category="Movie">
-          <a href="https://www.imdb.com/title/tt7286456/" class="thumbnail">
-            <img src="images/Joker.jpeg" width="180px" alt="Joker poster">
-          </a>
-          <div class="project-description">
-            <h3><a href="https://www.imdb.com/title/tt7286456/" class="movie-title">Joker</a></h3>
-            <p>
-              2019<br>
-              <i>Crime, Drama, Thriller</i>
-            </p>
-          </div>
-        </div>
-
-        <div class="list-item Movie" data-category="Movie">
-          <a href="https://www.imdb.com/title/tt33405511/" class="thumbnail">
-            <img src="images/Attack_on_Titan_The_Last_Attack.jpeg" width="180px" alt="Attack on Titan: The Last Attack poster">
-          </a>
-          <div class="project-description">
-            <h3><a href="https://www.imdb.com/title/tt33175825/" class="movie-title">Attack on Titan: The Last Attack</a></h3>
-            <p>
-              2024<br>
-              <i>Animation, Action, Drama</i><br>
-              <small>(Original title: Shingeki no Kyojin: The Last Attack)</small>
-            </p>
-          </div>
-        </div>
-
-        <div class="list-item Movie" data-category="Movie">
-          <a href="https://www.imdb.com/title/tt0482571/" class="thumbnail">
-            <img src="images/The_Prestige.webp" width="180px" alt="The Prestige poster">
-          </a>
-          <div class="project-description">
-            <h3><a href="https://www.imdb.com/title/tt0482571/" class="movie-title">The Prestige</a></h3>
-            <p>
-              2006<br>
-              <i>Drama, Mystery, Sci-Fi</i>
-            </p>
-          </div>
-        </div>
-
-        <div class="list-item Movie" data-category="Movie">
-          <a href="https://www.imdb.com/title/tt0114369/" class="thumbnail">
-            <img src="images/Seven.webp" width="180px" alt="Seven poster">
-          </a>
-          <div class="project-description">
-            <h3><a href="https://www.imdb.com/title/tt0114369/" class="movie-title">Seven</a></h3>
-            <p>
-              1995<br>
-              <i>Crime, Drama, Mystery</i><br>
-              <small>(Original title: Se7en)</small>
-            </p>
-          </div>
-        </div>
-
-
-
-        <div class="list-item Movie" data-category="Movie">
-          <a href="https://www.imdb.com/title/tt1375666/" class="thumbnail">
-            <img src="images/Inception.jpeg" width="180px" alt="Inception poster">
-          </a>
-          <div class="project-description">
-            <h3><a href="https://www.imdb.com/title/tt1375666/" class="movie-title">Inception</a></h3>
-            <p>
-              2010<br>
-              <i>Action, Adventure, Sci-Fi</i>
-            </p>
-          </div>
-        </div>
-
-
-        <div class="list-item Movie" data-category="Movie">
-          <a href="https://www.imdb.com/title/tt0325980/" class="thumbnail">
-            <img src="images/Pirates_of_the_Caribbean.jpg" width="180px" alt="Pirates of the Caribbean: The Curse of the Black Pearl poster">
-          </a>
-          <div class="project-description">
-            <h3><a href="https://www.imdb.com/title/tt0325980/" class="movie-title">Pirates of the Caribbean: The Curse of the Black Pearl</a></h3>
-            <p>
-              2003<br>
-              <i>Adventure, Fantasy</i>
-            </p>
-          </div>
-        </div>
-        <!-- ===== END MY TOP MOVIES ===== -->
-
-
-
+      <!-- Truncated Set of Highlights (Shown by Default) -->
+      <div id="main-highlights">
 
         <!-- <div class="list-item publication" data-category="publication">
           <a href="https://language-to-reward.github.io/" class="thumbnail">
@@ -265,101 +91,294 @@ Taqiaden is a Postdoctoral Researcher at Shanghai Jiao Tong University's School 
           </div>
         </div> -->
 
+        <div class="list-item highlight" data-category="highlight">
+          <div class="project-description">
+            <h3>GraspAgent 2.0: Adversarial Learning of Policy-Discriminative Grasp Distributions</h3>
+            <p>
+              <a href="https://github.com/taqiaden/GraspAgent_AnyHand" target="_blank" rel="noopener">Code</a>
+              &nbsp;|&nbsp;
+              <a href="https://huggingface.co/datasets/taqiaden/GraspAgent" target="_blank" rel="noopener">Dataset</a>
+
+            </p>
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/OhyEVtTZgt0" title="Demo 3"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+
+          </div>
+        </div>
+
+
+
+        <div class="list-item highlight" data-category="highlight">
+          <div class="project-description">
+            <h3>Learning Synergistic Multi-Skill Manipulation for a Real-World Dual-Arm Robot in Dense Clutter</h3>
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/_r1BAmj_31o" title="Demo 2"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+
+        <div class="list-item highlight" data-category="highlight">
+          <div class="project-description">
+            <h3>GraspAgent 1.0: Adversarial Continual Dexterous Grasp Learning</h3>
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/xBuanLjSncA" title="Demo 1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- ===== MY TOP MOVIES ===== -->
+      <div class="list-item Movie" data-category="Movie">
+        <a href="https://www.imdb.com/title/tt0816692/" class="thumbnail">
+          <img src="images/Interstellar.jpeg" width="180px" alt="Interstellar poster">
+        </a>
+        <div class="project-description">
+          <h3><a href="https://www.imdb.com/title/tt0816692/" class="movie-title">Interstellar</a></h3>
+          <p>
+            2014<br>
+            <i>Adventure, Drama, Sci-Fi</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="list-item Movie" data-category="Movie">
+        <a href="https://www.imdb.com/title/tt1130884/" class="thumbnail">
+          <img src="images/Shutter_Island.jpeg" width="180px" alt="Shutter Island poster">
+        </a>
+        <div class="project-description">
+          <h3><a href="https://www.imdb.com/title/tt1130884/" class="movie-title">Shutter Island</a></h3>
+          <p>
+            2010<br>
+            <i>Mystery, Thriller</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="list-item Movie" data-category="Movie">
+        <a href="https://www.imdb.com/title/tt0468569/" class="thumbnail">
+          <img src="images/The_Dark_Knight.avif" width="180px" alt="The Dark Knight poster">
+        </a>
+        <div class="project-description">
+          <h3><a href="https://www.imdb.com/title/tt0468569/" class="movie-title">The Dark Knight</a></h3>
+          <p>
+            2008<br>
+            <i>Action, Crime, Drama</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="list-item Movie" data-category="Movie">
+        <a href="https://www.imdb.com/title/tt0167404/" class="thumbnail">
+          <img src="images/The_Sixth_Sense.jpeg" width="180px" alt="The Sixth Sense poster">
+        </a>
+        <div class="project-description">
+          <h3><a href="https://www.imdb.com/title/tt0167404/" class="movie-title">The Sixth Sense</a></h3>
+          <p>
+            1999<br>
+            <i>Drama, Mystery, Thriller</i>
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="list-item Movie" data-category="Movie">
+        <a href="https://www.imdb.com/title/tt7286456/" class="thumbnail">
+          <img src="images/Joker.jpeg" width="180px" alt="Joker poster">
+        </a>
+        <div class="project-description">
+          <h3><a href="https://www.imdb.com/title/tt7286456/" class="movie-title">Joker</a></h3>
+          <p>
+            2019<br>
+            <i>Crime, Drama, Thriller</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="list-item Movie" data-category="Movie">
+        <a href="https://www.imdb.com/title/tt33405511/" class="thumbnail">
+          <img src="images/Attack_on_Titan_The_Last_Attack.jpeg" width="180px"
+            alt="Attack on Titan: The Last Attack poster">
+        </a>
+        <div class="project-description">
+          <h3><a href="https://www.imdb.com/title/tt33175825/" class="movie-title">Attack on Titan: The Last Attack</a>
+          </h3>
+          <p>
+            2024<br>
+            <i>Animation, Action, Drama</i><br>
+            <small>(Original title: Shingeki no Kyojin: The Last Attack)</small>
+          </p>
+        </div>
+      </div>
+
+      <div class="list-item Movie" data-category="Movie">
+        <a href="https://www.imdb.com/title/tt0482571/" class="thumbnail">
+          <img src="images/The_Prestige.webp" width="180px" alt="The Prestige poster">
+        </a>
+        <div class="project-description">
+          <h3><a href="https://www.imdb.com/title/tt0482571/" class="movie-title">The Prestige</a></h3>
+          <p>
+            2006<br>
+            <i>Drama, Mystery, Sci-Fi</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="list-item Movie" data-category="Movie">
+        <a href="https://www.imdb.com/title/tt0114369/" class="thumbnail">
+          <img src="images/Seven.webp" width="180px" alt="Seven poster">
+        </a>
+        <div class="project-description">
+          <h3><a href="https://www.imdb.com/title/tt0114369/" class="movie-title">Seven</a></h3>
+          <p>
+            1995<br>
+            <i>Crime, Drama, Mystery</i><br>
+            <small>(Original title: Se7en)</small>
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="list-item Movie" data-category="Movie">
+        <a href="https://www.imdb.com/title/tt1375666/" class="thumbnail">
+          <img src="images/Inception.jpeg" width="180px" alt="Inception poster">
+        </a>
+        <div class="project-description">
+          <h3><a href="https://www.imdb.com/title/tt1375666/" class="movie-title">Inception</a></h3>
+          <p>
+            2010<br>
+            <i>Action, Adventure, Sci-Fi</i>
+          </p>
+        </div>
+      </div>
+
+
+      <div class="list-item Movie" data-category="Movie">
+        <a href="https://www.imdb.com/title/tt0325980/" class="thumbnail">
+          <img src="images/Pirates_of_the_Caribbean.jpg" width="180px"
+            alt="Pirates of the Caribbean: The Curse of the Black Pearl poster">
+        </a>
+        <div class="project-description">
+          <h3><a href="https://www.imdb.com/title/tt0325980/" class="movie-title">Pirates of the Caribbean: The Curse of
+              the Black Pearl</a></h3>
+          <p>
+            2003<br>
+            <i>Adventure, Fantasy</i>
+          </p>
+        </div>
+      </div>
+      <!-- ===== END MY TOP MOVIES ===== -->
+
+
+
+
+
+
     </div>
-    </div>
+  </div>
 
-    <script>
+  <script>
 
-      // Isotope grid.
-      var $grid = $('.grid').isotope({
-        itemSelector: '.list-item',
-        layoutMode: 'fitRows',
-        transitionDuration: 0,
-        stagger: 10,
-        initLayout: false,
-        getSortData: {
-          name: '.name',
-          symbol: '.symbol',
-          number: '.number parseInt',
-          category: '[data-category]',
-          weight: function( itemElem ) {
-            var weight = $( itemElem ).find('.weight').text();
-            return parseFloat( weight.replace( /[\(\)]/g, '') );
-          }
-        }
-      });
-
-      // Bind filter button click.
-      $('#filters').on( 'click', 'button', function() {
-        var filterValue = $( this ).attr('data-filter');
-        localStorage.setItem('filterValue', filterValue);
-        $grid.isotope({ filter: filterValue });
-      });
-
-      // Change is-checked class on buttons.
-      $('.button-group').each( function( i, buttonGroup ) {
-        var $buttonGroup = $( buttonGroup );
-        $buttonGroup.on( 'click', 'button', function() {
-          $buttonGroup.find('.is-checked').removeClass('is-checked');
-          $( this ).addClass('is-checked');
-        });
-      });
-
-      function update_isotope() {
-        // Retrieve cached button click.
-        var defaultFilterValue = localStorage.getItem('filterValue');
-        if (defaultFilterValue == null) {
-          defaultFilterValue = ".highlight"
-        }
-        $grid.isotope({ filter: defaultFilterValue });
-        var buttons = document.getElementsByClassName("button");
-        for (var currButton of buttons) {
-          if (currButton.getAttribute('data-filter') == defaultFilterValue) {
-            currButton.classList.add('is-checked');
-          } else {
-            currButton.classList.remove('is-checked');
-          }
+    // Isotope grid.
+    var $grid = $('.grid').isotope({
+      itemSelector: '.list-item',
+      layoutMode: 'fitRows',
+      transitionDuration: 0,
+      stagger: 10,
+      initLayout: false,
+      getSortData: {
+        name: '.name',
+        symbol: '.symbol',
+        number: '.number parseInt',
+        category: '[data-category]',
+        weight: function (itemElem) {
+          var weight = $(itemElem).find('.weight').text();
+          return parseFloat(weight.replace(/[\(\)]/g, ''));
         }
       }
+    });
 
-      function toggle_bio() {
-        var x = document.getElementById("more-bio");
-        if (x.style.display === "none") {
-          x.style.display = "block";
+    // Bind filter button click.
+    $('#filters').on('click', 'button', function () {
+      var filterValue = $(this).attr('data-filter');
+      localStorage.setItem('filterValue', filterValue);
+      $grid.isotope({ filter: filterValue });
+    });
+
+    // Change is-checked class on buttons.
+    $('.button-group').each(function (i, buttonGroup) {
+      var $buttonGroup = $(buttonGroup);
+      $buttonGroup.on('click', 'button', function () {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        $(this).addClass('is-checked');
+      });
+    });
+
+    function update_isotope() {
+      // Retrieve cached button click.
+      var defaultFilterValue = localStorage.getItem('filterValue');
+      if (defaultFilterValue == null) {
+        defaultFilterValue = ".highlight"
+      }
+      $grid.isotope({ filter: defaultFilterValue });
+      var buttons = document.getElementsByClassName("button");
+      for (var currButton of buttons) {
+        if (currButton.getAttribute('data-filter') == defaultFilterValue) {
+          currButton.classList.add('is-checked');
         } else {
-          x.style.display = "none";
+          currButton.classList.remove('is-checked');
         }
       }
+    }
 
-      function toggle_highlights() {
-        var x = document.getElementById("main-highlights");
-        var y = document.getElementById("more-highlights");
-        var b = document.getElementById("toggle_highlights_button")
-        if (y.style.display === "none") {
-          x.style.display = "none";
-          y.style.display = "block";
-          b.innerHTML = "Show less"
-          update_isotope();
-        } else {
-          x.style.display = "block";
-          y.style.display = "none";
-          b.innerHTML = "Show more"
-          update_isotope();
-        }
+    function toggle_bio() {
+      var x = document.getElementById("more-bio");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
       }
+    }
 
-      update_isotope();
+    function toggle_highlights() {
+      var x = document.getElementById("main-highlights");
+      var y = document.getElementById("more-highlights");
+      var b = document.getElementById("toggle_highlights_button")
+      if (y.style.display === "none") {
+        x.style.display = "none";
+        y.style.display = "block";
+        b.innerHTML = "Show less"
+        update_isotope();
+      } else {
+        x.style.display = "block";
+        y.style.display = "none";
+        b.innerHTML = "Show more"
+        update_isotope();
+      }
+    }
 
-      // Re-layout once all images (movie posters) have loaded,
-      // so Isotope measures correct item heights and avoids overlap.
-      $(window).on('load', function () {
-        $grid.isotope('layout');
-      });
+    update_isotope();
 
-// Auto-number movie ranks based on DOM order
-      document.querySelectorAll('.list-item.Movie .movie-title').forEach(function (el, i) {
-        el.textContent = '#' + (i + 1) + ' — ' + el.textContent;
-      });
-    </script>
-  </body>
+    // Re-layout once all images (movie posters) have loaded,
+    // so Isotope measures correct item heights and avoids overlap.
+    $(window).on('load', function () {
+      $grid.isotope('layout');
+    });
+
+    // Auto-number movie ranks based on DOM order
+    document.querySelectorAll('.list-item.Movie .movie-title').forEach(function (el, i) {
+      el.textContent = '#' + (i + 1) + ' — ' + el.textContent;
+    });
+  </script>
+</body>
+
 </html>
