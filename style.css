@@ -680,10 +680,20 @@ body {
   .list-item.highlight,
   .list-item.publication {
     padding: 1em;
+    flex-direction: column;
+    gap: 12px;
   }
 
   .list-item .thumbnail {
+    flex: none;
+    width: 100%;
     max-width: 220px;
+    margin-right: 0;
+  }
+
+  .list-item .thumbnail img {
+    width: 100%;
+    height: auto;
   }
 
   .list-item {
