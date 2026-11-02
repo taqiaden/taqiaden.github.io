@@ -133,6 +133,25 @@
 
       </div>
 
+      <div class="list-item highlight" data-category="highlight">
+        <div class="project-description">
+          <h3>DeltaData, Computerized Maintenance Management System</h3>
+          <p>
+            <a href="documents/DeltaData_CMMS_about.pdf" target="_blank" rel="noopener">PDF</a>
+          </p>
+
+          <!-- Swipeable image gallery -->
+          <div class="gallery">
+            <img src="images/DeltaData/delta_data (1).jpg" alt="DeltaData screenshot 1">
+            <img src="images/DeltaData/delta_data (2).png" alt="DeltaData screenshot 1">
+            <img src="images/DeltaData/delta_data (2).jpg" alt="DeltaData screenshot 1">
+            <img src="images/DeltaData/delta_data (3).jpg" alt="DeltaData screenshot 1">
+            <img src="images/DeltaData/delta_data (4).jpg" alt="DeltaData screenshot 1">
+            <img src="images/DeltaData/delta_data (1).png" alt="DeltaData screenshot 1">
+          </div>
+        </div>
+      </div>
+
 
 
       <!-- ===== MY TOP MOVIES ===== -->
@@ -368,6 +387,7 @@
 
     update_isotope();
 
+
     // Re-layout once all images (movie posters) have loaded,
     // so Isotope measures correct item heights and avoids overlap.
     $(window).on('load', function () {
@@ -378,6 +398,43 @@
     document.querySelectorAll('.list-item.Movie .movie-title').forEach(function (el, i) {
       el.textContent = '#' + (i + 1) + ' — ' + el.textContent;
     });
+
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.style.cssText =
+          'position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;' +
+          'align-items:center;justify-content:center;z-index:9999';
+        const big = document.createElement('img');
+        big.src = img.src;
+        big.style.cssText = 'max-width:90%;max-height:90%;border-radius:6px';
+        overlay.appendChild(big);
+        overlay.onclick = () => overlay.remove();
+        document.body.appendChild(overlay);
+      });
+    });
+
+
+    // Horizontal wheel scrolling inside .gallery
+    document.querySelectorAll('.gallery').forEach(function (gallery) {
+      gallery.addEventListener('wheel', function (e) {
+        // Only take over if the gallery can actually scroll horizontally
+        if (gallery.scrollWidth <= gallery.clientWidth + 1) return;
+
+        // Ignore trackpad horizontal swipes (let them work natively)
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+
+        var atStart = gallery.scrollLeft <= 0;
+        var atEnd = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 1;
+
+        // If at an edge in the scroll direction, let the page scroll
+        if ((e.deltaY < 0 && atStart) || (e.deltaY > 0 && atEnd)) return;
+
+        e.preventDefault();
+        gallery.scrollLeft += e.deltaY;
+      }, { passive: false });
+    });
+
   </script>
 </body>
 

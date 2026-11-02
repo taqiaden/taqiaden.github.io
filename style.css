@@ -204,6 +204,31 @@ h2 {
 /**************************************************/
 /* Gallery of 3 preview videos. */
 
+.gallery {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;  /* stop scroll chaining to the page */
+  padding-bottom: 8px;
+}
+
+.gallery img {
+  flex: 0 0 auto;
+  width: 260px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+  scroll-snap-align: start;
+}
+
+/* optional: hide scrollbar but keep swipe */
+.gallery::-webkit-scrollbar { height: 6px; }
+.gallery::-webkit-scrollbar-thumb { background: #bbb; border-radius: 3px; }
+
 .previews {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -302,6 +327,8 @@ h3 a:hover {
 .project-description {
   width: 80%;
   float: left;
+    min-width: 0;          /* critical inside flex parents */
+
 }
 
 /**************************************************/
