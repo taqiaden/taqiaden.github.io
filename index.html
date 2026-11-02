@@ -9,14 +9,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Isotope JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+  <script defer src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
   <!-- Custom Style -->
   <script>
     document.documentElement.dataset.theme =
-      window.matchMedia('(prefers-color-scheme: dark)').matches
+      window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
         : 'light';
   </script>
@@ -426,6 +427,37 @@
   </div>
 
   <script>
+    // ---- Light / Dark Mode Toggle ----
+    (function () {
+      var button = document.getElementById('theme-toggle');
+
+      if (!button) return;
+
+      function update_theme_button() {
+        var isDark = document.documentElement.dataset.theme === 'dark';
+
+        button.setAttribute(
+          'aria-label',
+          isDark ? 'Switch to light mode' : 'Switch to dark mode'
+        );
+
+        button.setAttribute(
+          'title',
+          isDark ? 'Switch to light mode' : 'Switch to dark mode'
+        );
+      }
+
+      button.addEventListener('click', function () {
+        var currentTheme = document.documentElement.dataset.theme;
+
+        document.documentElement.dataset.theme =
+          currentTheme === 'dark' ? 'light' : 'dark';
+
+        update_theme_button();
+      });
+
+      update_theme_button();
+    })();
 
     // Isotope grid.
     var $grid = $('.grid').isotope({
@@ -598,7 +630,9 @@
       localStorage.setItem('lang', lang);
 
       // Re-layout Isotope (Arabic text height differs)
-      if (window.$grid) { $grid.isotope('layout'); }
+      if (typeof $grid !== 'undefined') {
+        $grid.isotope('layout');
+      }
     }
 
     // Keep the More/Less label consistent with the active language
@@ -621,36 +655,7 @@
       else { update_bio_label(); }
     })();
 
-    // ---- Light / Dark Mode Toggle ----
 
-    function update_theme_button() {
-      var button = document.getElementById('theme-toggle');
-      if (!button) return;
-
-      var isDark = document.documentElement.dataset.theme === 'dark';
-
-      button.setAttribute(
-        'aria-label',
-        isDark ? 'Switch to light mode' : 'Switch to dark mode'
-      );
-
-      button.setAttribute(
-        'title',
-        isDark ? 'Switch to light mode' : 'Switch to dark mode'
-      );
-    }
-
-    document.getElementById('theme-toggle').addEventListener('click', function () {
-      var currentTheme = document.documentElement.dataset.theme;
-
-      document.documentElement.dataset.theme =
-        currentTheme === 'dark' ? 'light' : 'dark';
-
-      update_theme_button();
-    });
-
-    // Set the initial button appearance
-    update_theme_button();
   </script>
   <!-- Cloudflare Web Analytics -->
   <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js'
