@@ -361,8 +361,24 @@ h3 a:hover {
   min-width: 0;
 }
 
+
+
 /**************************************************/
 /* Subtle footer at the bottom of the page. */
+
+#bio-toggle {
+  color: rgb(20, 110, 190);
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+#intro-text p + p {
+  margin-top: 1.5em;
+}
+
+#intro-text p {
+  text-align: justify;
+}
 
 #footer {
   color: #a0a8b0;

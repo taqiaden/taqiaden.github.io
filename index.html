@@ -32,28 +32,27 @@
   <div id="main">
     <div id="intro">
       <div id="intro-text">
-
         <h1>Taqiaden Alshameri</h1>
         <p>
           Taqiaden is a Postdoctoral Researcher at Shanghai Jiao Tong University's School of Automation and Intelligent
           Sensing. His research focuses on robot learning and reinforcement learning, grasping and dexterous
           manipulation, and embodied intelligence.
-        <div id="more-bio" style="display: none">
-          <br>
-          <p>A fighter who seeks to conquer real-life problems with creative algorithms. Always straightforward to the
+
+          <span id="more-bio" style="display: none">
+            A fighter who seeks to conquer real-life problems with creative algorithms. Always straightforward to the
             point with minimal resource utilization. Experienced Scholar and Mechanical Engineer with a proven track
             record in design and automation, robotics systems, CAD modeling, deep learning, optimization algorithms, and
-            developing computerized solutions. </p>
-        </div>
-        <br>
-        <a href="javascript:toggle_bio()">Bio</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://github.com/taqiaden">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://grabcad.com/taqiaden-1">GrabCAD</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://huggingface.co/taqiaden">Hugging Face</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://x.com/taqiaden">X</a>
-        <br><br>
+            developing computerized solutions.
+          </span>
 
-        <br><br>
+          <a href="javascript:toggle_bio()" id="bio-toggle">More</a>
+        </p>
+
+        <p>
+          <a href="https://github.com/taqiaden">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://grabcad.com/taqiaden-1">GrabCAD</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://huggingface.co/taqiaden">Hugging Face</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="https://x.com/taqiaden">X</a>
         </p>
       </div>
       <div id="intro-image">
@@ -64,8 +63,8 @@
     <div id="filters" class="button-group">
       <!-- <button class="button" data-filter="*">Show All</button> -->
       <button class="button" data-filter=".highlight">Highlights</button>
-      <button class="button is-checked" data-filter=".Movie">My Film Shortlist</button>
       <button class="button" data-filter=".publication">Research</button>
+      <button class="button is-checked" data-filter=".Movie">My Film Shortlist</button>
       <button class="button" data-filter=".contact">Contact</button>
     </div>
 
@@ -429,10 +428,13 @@
 
     function toggle_bio() {
       var x = document.getElementById("more-bio");
+      var b = document.getElementById("bio-toggle");
       if (x.style.display === "none") {
-        x.style.display = "block";
+        x.style.display = "inline";
+        b.textContent = "Less";
       } else {
         x.style.display = "none";
+        b.textContent = "More";
       }
     }
 
