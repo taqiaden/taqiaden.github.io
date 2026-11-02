@@ -228,6 +228,34 @@ h2 {
   display: block;
 }
 
+/**************************************************/
+/* Contact tab. */
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0 0;
+}
+
+.contact-list li {
+  line-height: 1.8em;
+  margin-bottom: 0.4em;
+}
+
+.contact-list li b {
+  display: inline-block;
+  width: 6em;
+  color: #150c21;
+}
+
+.contact-list a {
+  color: rgb(20, 110, 190);
+}
+
+.contact-list a:hover {
+  border-bottom: 1px solid rgb(20, 110, 190);
+}
+
 /* optional: hide scrollbar but keep swipe */
 .gallery::-webkit-scrollbar { height: 6px; }
 .gallery::-webkit-scrollbar-thumb { background: #bbb; border-radius: 3px; }
