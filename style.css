@@ -709,10 +709,7 @@ body {
   }
 }
 
-.list-item {
-  flex-direction: column;
-  gap: 12px;
-}
+
 
 
 
