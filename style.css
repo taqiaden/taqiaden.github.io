@@ -514,12 +514,12 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
               transform 0.2s ease;
 }
 
-.list-item.highlight:hover,
+/* .list-item.highlight:hover,
 .list-item.publication:hover {
 border-color: var(--text-muted);
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
   transform: translateY(-2px);
-}
+} */
 
 
 .project-description > p a {
