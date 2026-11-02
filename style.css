@@ -44,31 +44,33 @@ table {
   border-spacing: 0;
 }
 
+:root {
+  --text-primary: #1f2937;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+  --background: #ffffff;
+}
+
 /**************************************************/
 
-#body{
-  font-family: 'Asap', roboto, sans-serif;
+#body {
+  font-family: 'Asap', sans-serif;
   font-size: 1em;
-  line-height: 1.5em;
-  color: #150c21;
+  line-height: 1.65;
+  color: var(--text-primary);
 }
 
 #main {
-  width: 54em;
-  margin: 0px auto;
+  width: min(90%, 65rem);
+  margin: 0 auto;
   position: relative;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(20, 110, 190);
-}
 
-a:hover {
-  text-decoration: none;
-  border-bottom: 1px solid rgb(20, 110, 190);
-}
 
 i {
   font-style: italic;
@@ -88,26 +90,30 @@ h1 {
 /* Profile image and description. */
 
 #intro {
-  padding-top: 6em;
+  padding-top: 4em;
   display: flex;
+  align-items: flex-start;
+  gap: 2em;
 }
 
 #intro-text {
-  width: 40em;
-  float: left;
+  flex: 1;
+  min-width: 0;
 }
 
 #intro-image {
-  margin: 2em 0 0 2em;
+  flex: 0 0 12em;
   width: 12em;
   height: 12em;
-  float: left;
+  margin: 1em 0 0;
   overflow: hidden;
-  border-radius: 1em;
+  border-radius: 12px;
 }
 
 #intro-image img {
-  width: 12em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /**************************************************/
@@ -138,22 +144,28 @@ h2 {
   cursor: pointer;
   border: none;
   background: none;
-  color: #a0a8b0;
-  font-size: 1.6em;
-  line-height: 2.4em;
-  margin-top: 0.5em;
-  margin-right: 1em;
-  float: left;
+  color: var(--text-secondary);
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 2em;
+  margin-right: 1.5em;
   padding: 0;
+  transition: color 0.2s ease;
 }
 
-.button:hover {
-  color: #150c21;
-}
 
-.button:active,
+
 .button.is-checked {
-  color: #150c21;
+  font-weight: 600;
+}
+
+.button:hover,
+.button.is-checked {
+  color: var(--accent);
+}
+
+.button.is-checked {
+  font-weight: 600;
 }
 
 .button-group:after {
@@ -248,12 +260,22 @@ h2 {
   color: #150c21;
 }
 
-.contact-list a {
-  color: rgb(20, 110, 190);
+
+h2,
+.publication p,
+.list-item p.date {
+  color: var(--text-secondary);
 }
 
-.contact-list a:hover {
-  border-bottom: 1px solid rgb(20, 110, 190);
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
 }
 
 /* optional: hide scrollbar but keep swipe */
@@ -320,9 +342,10 @@ h2 {
 
 .thumbnail img {
   margin-top: 0.4em;
-  border-radius: 5px;
+  border-radius: 6px;
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
 }
 
 .thumbnail video {
@@ -453,16 +476,6 @@ html[dir="rtl"] .contact-list li b {
 }
 
 /* Tabs follow Arabic flow */
-html[dir="rtl"] #filters {
-  direction: rtl;
-  text-align: right;
-}
-
-html[dir="rtl"] .button {
-  float: right;
-  margin-right: 0;
-  margin-left: 1em;
-}
 
 html[dir="rtl"] #filters {
   direction: rtl;
@@ -476,7 +489,7 @@ html[dir="rtl"] .button {
 }
 
 #intro-text p:not(.lang-switch) {
-  text-align: justify;
+  text-align: left;
 }
 
 html[dir="rtl"] #intro-text p:not(.lang-switch) {
@@ -486,10 +499,20 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
 
 .list-item.highlight,
 .list-item.publication {
-  padding: 1.2em;
-  border: 1px solid #e5e7eb;
-  background: #fff;
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  padding: 1.3em;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--background);
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease,
+              transform 0.2s ease;
+}
+
+.list-item.highlight:hover,
+.list-item.publication:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  transform: translateY(-2px);
 }
 
 
@@ -526,7 +549,6 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
   width: 180px;
   height: 260px;
   object-fit: cover;
-  border-radius: 6px;
 }
 
 .contact-form-intro {
@@ -551,6 +573,70 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
   margin-top: 2em;
 }
 
+@media (max-width: 768px) {
+  #intro {
+    flex-direction: column-reverse;
+    padding-top: 2em;
+  }
+
+  #intro-text {
+    width: 100%;
+    float: none;
+  }
+
+  #intro-image {
+    margin: 0 0 1.5em 0;
+    width: 10em;
+    height: 10em;
+  }
+
+  #intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #menu {
+    flex-wrap: wrap;
+  }
+
+  .menu-item {
+    margin-right: 1em;
+  }
+
+  .list-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .list-item .thumbnail {
+    flex: none;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .list-item .thumbnail img {
+    width: 100%;
+    height: auto;
+  }
+
+  .previews {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .preview1,
+  .preview2,
+  .preview3 {
+    grid-column: 1;
+  }
+
+  #footer {
+    position: static;
+    margin-top: 3em;
+  }
+}
+
 
 /**************************************************/
 /* Subtle footer at the bottom of the page. */
@@ -566,7 +652,7 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
 }
 
 #intro-text p:not(.lang-switch) {
-  text-align: justify;
+  text-align: left;
 }
 
 html[dir="rtl"] #intro-text p:not(.lang-switch) {
@@ -574,8 +660,33 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
 }
 
 #footer {
-  color: #a0a8b0;
-  position: absolute;
-  bottom: 0;
-  line-height: 2.5em;
+  color: var(--text-muted);
+  position: static;
+  margin-top: 3em;
+  padding: 1em 0;
+  line-height: 1.8;
+  border-top: 1px solid var(--border);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.contact-form button {
+  padding: 0.6em 1.5em;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #1d4ed8;
 }
