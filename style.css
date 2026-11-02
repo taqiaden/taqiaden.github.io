@@ -356,8 +356,6 @@ h3 a:hover {
 }
 
 .project-description {
-  width: 80%;
-  float: left;
   min-width: 0;
 }
 
@@ -415,6 +413,143 @@ h3 a:hover {
   background: #0f4e86;
 }
 
+/**************************************************/
+/* Language toggle */
+
+.lang-switch {
+  margin-top: 1em;
+}
+
+.lang-btn {
+  color: #a0a8b0;
+  cursor: pointer;
+}
+
+.lang-btn.is-active {
+  color: #150c21;
+  font-weight: 700;
+}
+
+/* Arabic page direction */
+html[dir="rtl"] #intro-text,
+html[dir="rtl"] .project-description,
+html[dir="rtl"] .contact-list,
+html[dir="rtl"] .contact-form,
+html[dir="rtl"] .contact-form-intro {
+  text-align: right;
+}
+
+html[dir="rtl"] #intro-text {
+  float: right;
+}
+
+html[dir="rtl"] #intro-image {
+  float: right;
+  margin: 2em 2em 0 0;
+}
+
+html[dir="rtl"] .contact-list li b {
+  display: inline-block;
+}
+
+/* Tabs follow Arabic flow */
+html[dir="rtl"] #filters {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .button {
+  float: right;
+  margin-right: 0;
+  margin-left: 1em;
+}
+
+html[dir="rtl"] #filters {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .button {
+  float: right;
+  margin-right: 0;
+  margin-left: 1em;
+}
+
+#intro-text p:not(.lang-switch) {
+  text-align: justify;
+}
+
+html[dir="rtl"] #intro-text p:not(.lang-switch) {
+  text-align: right;
+}
+
+
+.list-item.highlight,
+.list-item.publication {
+  padding: 1.2em;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+
+.project-description > p a {
+  font-size: 0.95em;
+}
+
+.project-description > p {
+  color: #9ca3af;   /* makes the "|" separators lighter */
+}
+
+.project-description > p a {
+  color: rgb(20, 110, 190);
+}
+
+.project-description iframe {
+  border-radius: 8px;
+  margin-top: 0.8em;
+  max-width: 100%;
+  border: 1px solid #e5e7eb;
+  display: block;
+}
+
+.list-item.Movie .project-description p {
+  font-size: 0.9em;
+  color: #6b7280;
+}
+
+.list-item.Movie .movie-title {
+  font-weight: 600;
+}
+
+.list-item.Movie .thumbnail img {
+  width: 180px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.contact-form-intro {
+  color: #6b7280;
+  font-style: italic;
+  margin: 1.2em 0 0.6em;
+}
+
+.contact-form input:invalid:not(:placeholder-shown),
+.contact-form textarea:invalid:not(:placeholder-shown) {
+  border-color: #dc2626;
+}
+
+.contact-form button {
+  margin-top: 0.4em;
+}
+
+.lang-btn { transition: color 0.15s ease; }
+.lang-btn.is-active { border-bottom: 2px solid currentColor; }
+
+.contact-form-heading {
+  margin-top: 2em;
+}
 
 
 /**************************************************/
@@ -430,8 +565,12 @@ h3 a:hover {
   margin-top: 1.5em;
 }
 
-#intro-text p {
+#intro-text p:not(.lang-switch) {
   text-align: justify;
+}
+
+html[dir="rtl"] #intro-text p:not(.lang-switch) {
+  text-align: right;
 }
 
 #footer {

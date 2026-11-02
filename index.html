@@ -4,7 +4,8 @@
 <head>
 
   <!-- Title -->
-  <title>Taqiaden ALshameri</title>
+  <title>Taqiaden</title>
+  <link rel="icon" type="image/png" href="images/profile.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=1000">
 
@@ -32,20 +33,29 @@
   <div id="main">
     <div id="intro">
       <div id="intro-text">
-        <h1>Taqiaden Alshameri</h1>
+        <h1><span data-en="Taqiaden Alshameri" data-ar="تقي الدين الشميري"> Taqiaden Alshameri </span></h1>
         <p>
-          Taqiaden is a Postdoctoral Researcher at Shanghai Jiao Tong University's School of Automation and Intelligent
-          Sensing. His research focuses on robot learning and reinforcement learning, grasping and dexterous
-          manipulation, and embodied intelligence.
+          <span
+            data-en="Taqiaden is a Postdoctoral Researcher at Shanghai Jiao Tong University's School of Automation and Intelligent Sensing. His research focuses on robot learning and reinforcement learning, grasping and dexterous manipulation, and embodied intelligence."
+            data-ar="تقي الدين باحث ما بعد الدكتوراه في كلية الأتمتة والاستشعار الذكي بجامعة شنغهاي جياو تونغ. تركز أبحاثه على تعلم الروبوتات والتعلم المعزز، والقبض والتلاعب البارع، والذكاء المتجسد.">
+            Taqiaden is a Postdoctoral Researcher at Shanghai Jiao Tong University's School of Automation and
+            Intelligent
+            Sensing. His research focuses on robot learning and reinforcement learning, grasping and dexterous
+            manipulation,
+            and embodied intelligence.
+          </span>
 
-          <span id="more-bio" style="display: none">
+          <span id="more-bio" style="display: none"
+            data-en="A fighter who seeks to conquer real-life problems with creative algorithms. Always straightforward to the point with minimal resource utilization. Experienced Scholar and Mechanical Engineer with a proven track record in design and automation, robotics systems, CAD modeling, deep learning, optimization algorithms, and developing computerized solutions."
+            data-ar="مقاتل يسعى للتغلب على مشاكل الحياة الواقعية بخوارزميات إبداعية. مباشر دائمًا مع الحد الأدنى من استخدام الموارد. باحث ومهندس ميكانيكي متمرس مع سجل حافل في التصميم والأتمتة وأنظمة الروبوتات ونمذجة CAD والتعلم العميق وخوارزميات التحسين وتطوير الحلول المحوسبة.">
             A fighter who seeks to conquer real-life problems with creative algorithms. Always straightforward to the
             point with minimal resource utilization. Experienced Scholar and Mechanical Engineer with a proven track
-            record in design and automation, robotics systems, CAD modeling, deep learning, optimization algorithms, and
+            record in design and automation, robotics systems, CAD modeling, deep learning, optimization algorithms,
+            and
             developing computerized solutions.
           </span>
 
-          <a href="javascript:toggle_bio()" id="bio-toggle">More</a>
+          <a href="javascript:toggle_bio()" id="bio-toggle" data-en="More" data-ar="المزيد">More</a>
         </p>
 
         <p>
@@ -55,17 +65,25 @@
           <a href="https://x.com/taqiaden">X</a>
         </p>
       </div>
+
       <div id="intro-image">
         <img src="images/profile.png">
       </div>
+      <p class="lang-switch">
+        <a href="javascript:set_lang('en')" id="lang-en" class="lang-btn is-active">EN</a>
+        &nbsp;|&nbsp;
+        <a href="javascript:set_lang('ar')" id="lang-ar" class="lang-btn">العربية</a>
+      </p>
     </div>
 
     <div id="filters" class="button-group">
       <!-- <button class="button" data-filter="*">Show All</button> -->
-      <button class="button" data-filter=".highlight">Highlights</button>
-      <button class="button" data-filter=".publication">Research</button>
-      <button class="button is-checked" data-filter=".Movie">My Film Shortlist</button>
-      <button class="button" data-filter=".contact">Contact</button>
+      <button class="button" data-filter=".highlight" data-en="Highlights" data-ar="أبرز الأعمال">Highlights</button>
+      <button class="button" data-filter=".publication" data-en="Research" data-ar="الأبحاث">Research</button>
+      <button class="button is-checked" data-filter=".Movie" data-en="My Film Shortlist"
+        data-ar="قائمة أفلامي المفضلة">My Film
+        Shortlist</button>
+      <button class="button" data-filter=".contact" data-en="Contact" data-ar="تواصل">Contact</button>
     </div>
 
     <div class="grid">
@@ -73,43 +91,51 @@
       <!-- ===== CONTACT ===== -->
       <div class="list-item contact" data-category="contact">
         <div class="project-description">
-          <p>
-            Feel free to reach out through any of the channels below.
+
+          <p class="contact-form-intro"
+            data-en="Reach me through any of the channels below, or leave a message using the form."
+            data-ar="تواصل معي عبر أي من القنوات أدناه، أو اترك رسالة باستخدام النموذج.">
+            Reach me through any of the channels below, or leave a message using the form.
           </p>
+
+          <!-- 1) Contact details first -->
           <ul class="contact-list">
             <li>
-              <b>WhatsApp:</b>
+              <i data-en="WhatsApp:" data-ar="واتساب:">WhatsApp:</i>
               <a href="https://wa.me/967774631499" target="_blank" rel="noopener">taqiaden</a>
-              <a href="https://wa.me/967774631499" target="_blank" rel="noopener"> (+967 774 631 499)</a>
+              <a href="https://wa.me/967774631499" target="_blank" rel="noopener">(+967 774 631 499)</a>
             </li>
             <li>
-              <b>Phone:</b>
+              <i data-en="Phone:" data-ar="الهاتف:">Phone:</i>
               <a href="tel:+8619840178664">+86 198 4017 8664</a>
             </li>
             <li>
-              <b>WeChat:</b> taqiaden
+              <i data-en="WeChat:" data-ar="ويتشات:">WeChat:</i>
+              <span>taqiaden</span>
             </li>
             <li>
-              <b>Email:</b>
+              <i data-en="Email:" data-ar="البريد الإلكتروني:">Email:</i>
               <a href="mailto:taqiaden@gmail.com">taqiaden@gmail.com</a>
               <a href="mailto:taqiaden@163.com">taqiaden@163.com</a>
-
             </li>
           </ul>
-          <!-- Contact form (FormBeam) -->
+
+          <!-- 2) Form below the details -->
+
           <form action="https://api.formbeam.io/f/quick-bright-tree-1714" method="POST" class="contact-form">
             <p>
-              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="text" name="name" data-en-placeholder="Your Name" data-ar-placeholder="اسمك" required>
             </p>
             <p>
-              <input type="email" name="email" placeholder="Your Email" required>
+              <input type="email" name="email" data-en-placeholder="Your Email" data-ar-placeholder="بريدك الإلكتروني"
+                required>
             </p>
             <p>
-              <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+              <textarea name="message" rows="4" data-en-placeholder="Your Message" data-ar-placeholder="رسالتك"
+                required></textarea>
             </p>
-            <!-- Honeypot: hidden field to stop bots (leave empty) -->
-            <input type="text" name="honeypot" tabindex="-1" autocomplete="off" style="display:none">
-            <button type="submit">Send</button>
+            <input type="text" name="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+            <button type="submit" data-en="Send" data-ar="إرسال">Send</button>
           </form>
         </div>
       </div>
@@ -499,7 +525,57 @@
       });
     });
 
+    // ---- Language toggle (EN / AR) ----
+    function set_lang(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 
+      // Swap visible text for elements that have both data-en and data-ar
+      document.querySelectorAll('[data-en][data-ar]').forEach(function (el) {
+        el.textContent = (lang === 'ar') ? el.getAttribute('data-ar')
+          : el.getAttribute('data-en');
+      });
+
+      // Swap placeholders
+      document.querySelectorAll('[data-en-placeholder][data-ar-placeholder]').forEach(function (el) {
+        el.placeholder = (lang === 'ar') ? el.getAttribute('data-ar-placeholder')
+          : el.getAttribute('data-en-placeholder');
+      });
+
+      // Update active state on the toggle buttons
+      var enBtn = document.getElementById('lang-en');
+      var arBtn = document.getElementById('lang-ar');
+      if (enBtn && arBtn) {
+        enBtn.classList.toggle('is-active', lang === 'en');
+        arBtn.classList.toggle('is-active', lang === 'ar');
+      }
+
+      // Remember choice
+      localStorage.setItem('lang', lang);
+
+      // Re-layout Isotope (Arabic text height differs)
+      if (window.$grid) { $grid.isotope('layout'); }
+    }
+
+    // Keep the More/Less label consistent with the active language
+    function update_bio_label() {
+      var b = document.getElementById('bio-toggle');
+      var x = document.getElementById('more-bio');
+      if (!b || !x) return;
+      var lang = document.documentElement.lang || 'en';
+      var expanded = (x.style.display !== 'none');
+      var moreTxt = (lang === 'ar') ? 'المزيد' : 'More';
+      var lessTxt = (lang === 'ar') ? 'أقل' : 'Less';
+      b.textContent = expanded ? lessTxt : moreTxt;
+    }
+
+
+    // Apply saved language on page load
+    (function () {
+      var saved = localStorage.getItem('lang');
+      if (saved === 'ar') { set_lang('ar'); }
+      else { update_bio_label(); }
+    })();
   </script>
 </body>
 <!-- Cloudflare Web Analytics -->
