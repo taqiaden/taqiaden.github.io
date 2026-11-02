@@ -204,15 +204,20 @@ h2 {
 /**************************************************/
 /* Gallery of 3 preview videos. */
 
+/* Horizontal swipe/scroll strip */
 .gallery {
   display: flex;
   gap: 12px;
   overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
   padding-bottom: 8px;
 }
 
+/* Fixed-size thumbnails; wide images cropped inside the box */
 .gallery img {
   flex: 0 0 auto;
   width: 260px;
@@ -220,6 +225,7 @@ h2 {
   object-fit: cover;
   border-radius: 8px;
   scroll-snap-align: start;
+  display: block;
 }
 
 /* optional: hide scrollbar but keep swipe */
@@ -324,6 +330,7 @@ h3 a:hover {
 .project-description {
   width: 80%;
   float: left;
+  min-width: 0;
 }
 
 /**************************************************/
