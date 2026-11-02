@@ -439,7 +439,19 @@
     // Bind filter button click.
     $('#filters').on('click', 'button', function () {
       var filterValue = $(this).attr('data-filter');
+
       localStorage.setItem('filterValue', filterValue);
+
+      // Update URL hash
+      var tab = {
+        '.highlight': 'highlights',
+        '.publication': 'research',
+        '.Movie': 'films',
+        '.contact': 'contact'
+      };
+
+      history.replaceState(null, '', '#' + tab[filterValue]);
+
       $grid.isotope({ filter: filterValue });
     });
 
@@ -453,15 +465,35 @@
     });
 
     function update_isotope() {
-      // Retrieve cached button click.
-      var defaultFilterValue = localStorage.getItem('filterValue');
-      if (defaultFilterValue == null) {
-        defaultFilterValue = ".highlight"
+
+      var tab = {
+        'highlights': '.highlight',
+        'research': '.publication',
+        'films': '.Movie',
+        'contact': '.contact'
+      };
+
+      // URL hash takes priority over saved preference
+      var hash = window.location.hash.replace('#', '');
+      var defaultFilterValue = tab[hash];
+
+      // Otherwise, use the saved preference
+      if (!defaultFilterValue) {
+        defaultFilterValue = localStorage.getItem('filterValue');
       }
+
+      // Default tab
+      if (!defaultFilterValue) {
+        defaultFilterValue = '.highlight';
+      }
+
       $grid.isotope({ filter: defaultFilterValue });
-      var buttons = document.getElementsByClassName("button");
+
+      // Update active button
+      var buttons = document.getElementsByClassName('button');
+
       for (var currButton of buttons) {
-        if (currButton.getAttribute('data-filter') == defaultFilterValue) {
+        if (currButton.getAttribute('data-filter') === defaultFilterValue) {
           currButton.classList.add('is-checked');
         } else {
           currButton.classList.remove('is-checked');
