@@ -53,32 +53,34 @@
 
           <a href="javascript:toggle_bio()" id="bio-toggle" data-en="More" data-ar="المزيد">More</a>
         </p>
-
+        <p class="lang-switch">
+          <a href="javascript:set_lang('en')" id="lang-en" class="lang-btn is-active">EN</a>
+          &nbsp;|&nbsp;
+          <a href="javascript:set_lang('ar')" id="lang-ar" class="lang-btn">العربية</a>
+        </p>
         <p>
           <a href="https://github.com/taqiaden">Github</a>&nbsp;|&nbsp;
           <a href="https://grabcad.com/taqiaden-1">GrabCAD</a>&nbsp;|&nbsp;
           <a href="https://huggingface.co/taqiaden">Hugging Face</a>&nbsp;|&nbsp;
           <a href="https://x.com/taqiaden">X</a>
         </p>
+
       </div>
 
       <div id="intro-image">
         <img src="images/profile.png">
       </div>
-      <p class="lang-switch">
-        <a href="javascript:set_lang('en')" id="lang-en" class="lang-btn is-active">EN</a>
-        &nbsp;|&nbsp;
-        <a href="javascript:set_lang('ar')" id="lang-ar" class="lang-btn">العربية</a>
-      </p>
+
     </div>
 
     <div id="filters" class="button-group">
       <!-- <button class="button" data-filter="*">Show All</button> -->
       <button class="button" data-filter=".highlight" data-en="Highlights" data-ar="أبرز الأعمال">Highlights</button>
       <button class="button" data-filter=".publication" data-en="Research" data-ar="الأبحاث">Research</button>
-      <button class="button" data-filter=".Movie" data-en="My Film Shortlist" data-ar="قائمة أفلامي المفضلة">My Film
+      <button class="button" data-filter=".Movie" data-en="Favorite Films" data-ar="أفلامي المفضلة">My Film
         Shortlist</button>
       <button class="button" data-filter=".contact" data-en="Contact" data-ar="تواصل">Contact</button>
+
     </div>
 
     <div class="grid">
@@ -577,9 +579,10 @@
       else { update_bio_label(); }
     })();
   </script>
+  <!-- Cloudflare Web Analytics -->
+  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "94af3c9c97d24dba81c3a80b0bb8707d"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
-<!-- Cloudflare Web Analytics -->
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js'
-  data-cf-beacon='{"token": "94af3c9c97d24dba81c3a80b0bb8707d"}'></script><!-- End Cloudflare Web Analytics -->
+
 
 </html>

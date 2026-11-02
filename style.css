@@ -49,6 +49,7 @@ table {
   --text-secondary: #64748b;
   --text-muted: #94a3b8;
   --accent: #2563eb;
+  --accent-hover: #1d4ed8;
   --border: #e5e7eb;
   --background: #ffffff;
 }
@@ -132,11 +133,11 @@ h2 {
   font-size: 1.6em;
   line-height: 2.4em;
   margin-top: 0.5em;
-  color: #a0a8b0;
+  color: var(--text-secondary);
 }
 
 .selected h2 {
-  color: #150c21;
+  color: var(--text-primary);
 }
 
 .button {
@@ -210,7 +211,7 @@ h2 {
 .list-item p.date {
   display: inline-block;
   width: 3em;
-  color: #a0a8b0;
+  color: var(--text-secondary);
 }
 
 /**************************************************/
@@ -257,9 +258,8 @@ h2 {
 .contact-list li b {
   display: inline-block;
   width: 6em;
-  color: #150c21;
+  color: var(--text-primary);
 }
-
 
 h2,
 .publication p,
@@ -274,14 +274,16 @@ a {
 }
 
 a:hover {
-  color: #1d4ed8;
+  color: var(--accent);
   text-decoration: underline;
 }
 
 /* optional: hide scrollbar but keep swipe */
 .gallery::-webkit-scrollbar { height: 6px; }
-.gallery::-webkit-scrollbar-thumb { background: #bbb; border-radius: 3px; }
-
+.gallery::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
 .previews {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -319,11 +321,11 @@ a:hover {
 }
 
 .toggle-button a {
-  color: #a0a8b0;
+  color: var(--text-muted);
 }
 
 .toggle-button a:hover {
-  color: rgb(20, 110, 190);
+  color: var(--accent);
 }
 
 /**************************************************/
@@ -361,11 +363,11 @@ h3 {
 }
 
 h3 a {
-  color: #150c21;
+  color: var(--text-primary);
 }
 
 h3 a:hover {
-  color: rgb(20, 110, 190);
+  color: var(--accent);
 }
 
 .publication {
@@ -375,7 +377,7 @@ h3 a:hover {
 .publication p {
   font-size: 1em;
   line-height: 1.5em;
-  color: #a0a8b0;
+  color: var(--text-secondary);
 }
 
 .project-description {
@@ -399,14 +401,14 @@ h3 a:hover {
 .contact-form textarea {
   width: 100%;
   padding: 0.6em 0.8em;
-  border: 1px solid #d0d7de;
+  border: 1px solid var(--border);
   border-radius: 6px;
   font-family: inherit;
   font-size: 1em;
   line-height: 1.4;
   box-sizing: border-box;
-  color: #150c21;
-  background: #fff;
+  color: var(--text-primary);
+  background: var(--background);
 }
 
 .contact-form textarea {
@@ -417,8 +419,8 @@ h3 a:hover {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: rgb(20, 110, 190);
-  box-shadow: 0 0 0 3px rgba(20, 110, 190, 0.15);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 .contact-form button {
@@ -444,12 +446,12 @@ h3 a:hover {
 }
 
 .lang-btn {
-  color: #a0a8b0;
+  color: var(--text-muted);
   cursor: pointer;
 }
 
 .lang-btn.is-active {
-  color: #150c21;
+  color: var(--text-primary);
   font-weight: 700;
 }
 
@@ -514,7 +516,7 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
 
 .list-item.highlight:hover,
 .list-item.publication:hover {
-  border-color: #cbd5e1;
+border-color: var(--text-muted);
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
   transform: translateY(-2px);
 }
@@ -525,24 +527,24 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
 }
 
 .project-description > p {
-  color: #9ca3af;   /* makes the "|" separators lighter */
+  color: var(--text-muted);
 }
 
 .project-description > p a {
-  color: rgb(20, 110, 190);
+  color: var(--accent);
 }
 
 .project-description iframe {
   border-radius: 8px;
   margin-top: 0.8em;
   max-width: 100%;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border);
   display: block;
 }
 
 .list-item.Movie .project-description p {
   font-size: 0.9em;
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 .list-item.Movie .movie-title {
@@ -556,7 +558,7 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
 }
 
 .contact-form-intro {
-  color: #6b7280;
+  color: var(--text-secondary);
   font-style: italic;
   margin: 1.2em 0 0.6em;
 }
@@ -646,7 +648,7 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
 /* Subtle footer at the bottom of the page. */
 
 #bio-toggle {
-  color: rgb(20, 110, 190);
+  color: var(--accent);
   cursor: pointer;
   margin-left: 4px;
 }
@@ -692,7 +694,7 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
 }
 
 .contact-form button:hover {
-  background: #1d4ed8;
+  background: var(--accent-hover);
 }
 
 /* Keyboard accessibility */
