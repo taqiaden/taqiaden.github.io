@@ -45,15 +45,20 @@ table {
 }
 
 :root {
+  color-scheme: light;
+
   --text-primary: #1f2937;
   --text-secondary: #64748b;
   --text-muted: #94a3b8;
+
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
+
   --border: #e5e7eb;
   --background: #ffffff;
+  --surface: #ffffff;
+  --surface-hover: #f8fafc;
 }
-
 /**************************************************/
 
 #body {
@@ -772,5 +777,176 @@ body {
   #filters .button {
     margin: 0;
     float: none;
+  }
+}
+
+
+/* ===== AUTOMATIC DARK MODE ===== */
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    color-scheme: dark;
+
+    --text-primary: #e5e7eb;
+    --text-secondary: #a1aab8;
+    --text-muted: #929dad;
+
+    --accent: #8ab4f8;
+    --accent-hover: #aecbfa;
+
+    --border: #343d4a;
+    --background: #151a22;
+    --surface: #1e2631;
+    --surface-hover: #273241;
+  }
+
+
+  html,
+body,
+#body,
+#main {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+  /* Page background */
+  html,
+  body,
+  #main {
+    background-color: var(--background);
+    color: var(--text-primary);
+  }
+
+  /* Headings */
+  h1,
+  h3,
+  h3 a,
+  .selected h2 {
+    color: var(--text-primary);
+  }
+
+  h2,
+  .publication p,
+  .list-item p.date,
+  .list-item.Movie .project-description p {
+    color: var(--text-secondary);
+  }
+
+  /* Links */
+  a,
+  .project-description > p a {
+    color: var(--accent);
+  }
+
+  a:hover,
+  h3 a:hover {
+    color: var(--accent-hover);
+  }
+
+  /* Navigation tabs */
+  .button {
+    color: var(--text-secondary);
+    background: transparent;
+  }
+
+  .button:hover,
+  .button.is-checked {
+    color: var(--accent);
+  }
+
+  /* Publication and highlight cards */
+  .list-item.highlight,
+  .list-item.publication {
+    background-color: var(--surface);
+    border-color: var(--border);
+  }
+
+  .list-item.highlight:hover,
+  .list-item.publication:hover {
+    border-color: #526176;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Descriptions */
+  .project-description > p {
+    color: var(--text-secondary);
+  }
+
+  /* Contact information */
+  .contact-list li,
+  .contact-list li b,
+  .contact-form-intro {
+    color: var(--text-secondary);
+  }
+
+  /* Contact form */
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    background-color: var(--surface);
+    color: var(--text-primary);
+    border-color: var(--border);
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: var(--text-muted);
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(138, 180, 248, 0.15);
+  }
+
+.contact-form button {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.contact-form button:hover {
+  background-color: var(--accent-hover);
+}
+
+  /* Language switch */
+  .lang-btn {
+    color: var(--text-muted);
+  }
+
+  .lang-btn.is-active {
+    color: var(--text-primary);
+  }
+
+  /* Bio toggle */
+  #bio-toggle {
+    color: var(--accent);
+  }
+
+  /* Gallery scrollbar */
+  .gallery::-webkit-scrollbar-thumb {
+    background: #455164;
+  }
+
+  /* Footer */
+  #footer {
+    color: var(--text-muted);
+    border-top-color: var(--border);
+  }
+
+  /* Embedded videos */
+  .project-description iframe {
+    border-color: var(--border);
+  }
+
+  /* Invalid form fields */
+  .contact-form input:invalid:not(:placeholder-shown),
+  .contact-form textarea:invalid:not(:placeholder-shown) {
+    border-color: #f87171;
+  }
+
+  /* Text selection */
+  ::selection {
+    background: #365b91;
+    color: #ffffff;
   }
 }
