@@ -781,172 +781,196 @@ body {
 }
 
 
-/* ===== AUTOMATIC DARK MODE ===== */
+/* ===== DARK MODE ===== */
 
-@media (prefers-color-scheme: dark) {
+html[data-theme="dark"] {
+  color-scheme: dark;
 
-  :root {
-    color-scheme: dark;
+  --text-primary: #e5e7eb;
+  --text-secondary: #a1aab8;
+  --text-muted: #929dad;
 
-    --text-primary: #e5e7eb;
-    --text-secondary: #a1aab8;
-    --text-muted: #929dad;
+  --accent: #8ab4f8;
+  --accent-hover: #aecbfa;
 
-    --accent: #8ab4f8;
-    --accent-hover: #aecbfa;
+  --border: #343d4a;
+  --background: #151a22;
+  --surface: #1e2631;
+  --surface-hover: #273241;
+}
 
-    --border: #343d4a;
-    --background: #151a22;
-    --surface: #1e2631;
-    --surface-hover: #273241;
-  }
-
-
-  html,
-body,
-#body,
-#main {
+/* Page background */
+html[data-theme="dark"],
+html[data-theme="dark"] body,
+html[data-theme="dark"] #body,
+html[data-theme="dark"] #main {
   background-color: var(--background);
   color: var(--text-primary);
 }
-  /* Page background */
-  html,
-  body,
-  #main {
-    background-color: var(--background);
-    color: var(--text-primary);
-  }
 
-  /* Headings */
-  h1,
-  h3,
-  h3 a,
-  .selected h2 {
-    color: var(--text-primary);
-  }
+/* Headings */
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h3 a,
+html[data-theme="dark"] .selected h2 {
+  color: var(--text-primary);
+}
 
-  h2,
-  .publication p,
-  .list-item p.date,
-  .list-item.Movie .project-description p {
-    color: var(--text-secondary);
-  }
+html[data-theme="dark"] h2,
+html[data-theme="dark"] .publication p,
+html[data-theme="dark"] .list-item p.date,
+html[data-theme="dark"] .list-item.Movie .project-description p {
+  color: var(--text-secondary);
+}
 
-  /* Links */
-  a,
-  .project-description > p a {
-    color: var(--accent);
-  }
+/* Links */
+html[data-theme="dark"] a,
+html[data-theme="dark"] .project-description > p a {
+  color: var(--accent);
+}
 
-  a:hover,
-  h3 a:hover {
-    color: var(--accent-hover);
-  }
+html[data-theme="dark"] a:hover,
+html[data-theme="dark"] h3 a:hover {
+  color: var(--accent-hover);
+}
 
-  /* Navigation tabs */
-  .button {
-    color: var(--text-secondary);
-    background: transparent;
-  }
+/* Navigation tabs */
+html[data-theme="dark"] .button {
+  color: var(--text-secondary);
+  background: transparent;
+}
 
-  .button:hover,
-  .button.is-checked {
-    color: var(--accent);
-  }
+html[data-theme="dark"] .button:hover,
+html[data-theme="dark"] .button.is-checked {
+  color: var(--accent);
+}
 
-  /* Publication and highlight cards */
-  .list-item.highlight,
-  .list-item.publication {
-    background-color: var(--surface);
-    border-color: var(--border);
-  }
+/* Cards */
+html[data-theme="dark"] .list-item.highlight,
+html[data-theme="dark"] .list-item.publication {
+  background-color: var(--surface);
+  border-color: var(--border);
+}
 
-  .list-item.highlight:hover,
-  .list-item.publication:hover {
-    border-color: #526176;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-  }
+html[data-theme="dark"] .list-item.highlight:hover,
+html[data-theme="dark"] .list-item.publication:hover {
+  border-color: #526176;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
 
-  /* Descriptions */
-  .project-description > p {
-    color: var(--text-secondary);
-  }
+/* Descriptions */
+html[data-theme="dark"] .project-description > p {
+  color: var(--text-secondary);
+}
 
-  /* Contact information */
-  .contact-list li,
-  .contact-list li b,
-  .contact-form-intro {
-    color: var(--text-secondary);
-  }
+/* Contact information */
+html[data-theme="dark"] .contact-list li,
+html[data-theme="dark"] .contact-list li b,
+html[data-theme="dark"] .contact-form-intro {
+  color: var(--text-secondary);
+}
 
-  /* Contact form */
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form textarea {
-    background-color: var(--surface);
-    color: var(--text-primary);
-    border-color: var(--border);
-  }
+/* Contact form */
+html[data-theme="dark"] .contact-form input[type="text"],
+html[data-theme="dark"] .contact-form input[type="email"],
+html[data-theme="dark"] .contact-form textarea {
+  background-color: var(--surface);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
 
-  .contact-form input::placeholder,
-  .contact-form textarea::placeholder {
-    color: var(--text-muted);
-  }
+html[data-theme="dark"] .contact-form input::placeholder,
+html[data-theme="dark"] .contact-form textarea::placeholder {
+  color: var(--text-muted);
+}
 
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(138, 180, 248, 0.15);
-  }
+html[data-theme="dark"] .contact-form input:focus,
+html[data-theme="dark"] .contact-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(138, 180, 248, 0.15);
+}
 
-.contact-form button {
+html[data-theme="dark"] .contact-form button {
   background-color: var(--accent);
   color: #ffffff;
 }
 
-.contact-form button:hover {
+html[data-theme="dark"] .contact-form button:hover {
   background-color: var(--accent-hover);
 }
 
-  /* Language switch */
-  .lang-btn {
-    color: var(--text-muted);
-  }
+/* Language switch */
+html[data-theme="dark"] .lang-btn {
+  color: var(--text-muted);
+}
 
-  .lang-btn.is-active {
-    color: var(--text-primary);
-  }
+html[data-theme="dark"] .lang-btn.is-active {
+  color: var(--text-primary);
+}
 
-  /* Bio toggle */
-  #bio-toggle {
-    color: var(--accent);
-  }
+/* Bio toggle */
+html[data-theme="dark"] #bio-toggle {
+  color: var(--accent);
+}
 
-  /* Gallery scrollbar */
-  .gallery::-webkit-scrollbar-thumb {
-    background: #455164;
-  }
+/* Gallery scrollbar */
+html[data-theme="dark"] .gallery::-webkit-scrollbar-thumb {
+  background: #455164;
+}
 
-  /* Footer */
-  #footer {
-    color: var(--text-muted);
-    border-top-color: var(--border);
-  }
+/* Footer */
+html[data-theme="dark"] #footer {
+  color: var(--text-muted);
+  border-top-color: var(--border);
+}
 
-  /* Embedded videos */
-  .project-description iframe {
-    border-color: var(--border);
-  }
+/* Embedded videos */
+html[data-theme="dark"] .project-description iframe {
+  border-color: var(--border);
+}
 
-  /* Invalid form fields */
-  .contact-form input:invalid:not(:placeholder-shown),
-  .contact-form textarea:invalid:not(:placeholder-shown) {
-    border-color: #f87171;
-  }
+/* Invalid form fields */
+html[data-theme="dark"] .contact-form input:invalid:not(:placeholder-shown),
+html[data-theme="dark"] .contact-form textarea:invalid:not(:placeholder-shown) {
+  border-color: #f87171;
+}
 
-  /* Text selection */
-  ::selection {
-    background: #365b91;
-    color: #ffffff;
-  }
+/* Text selection */
+html[data-theme="dark"] ::selection {
+  background: #365b91;
+  color: #ffffff;
+}
+
+/* Reverse visitor counter image in dark mode */
+html[data-theme="dark"] .list-item img[src*="hitscounter.dev"] {
+  filter: invert(1);
+}
+
+/* Theme toggle button */
+
+.theme-switch {
+  margin-top: 0.7em;
+}
+
+#theme-toggle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid var(--text-secondary);
+  border-radius: 3px;
+  background: #000000;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background-color 0.2s ease;
+}
+
+html[data-theme="dark"] #theme-toggle {
+  background: #ffffff;
+  border-color: #a1aab8;
+}
+
+#theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
