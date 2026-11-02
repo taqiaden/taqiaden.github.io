@@ -415,26 +415,6 @@
     });
 
 
-    // Horizontal wheel scrolling inside .gallery
-    document.querySelectorAll('.gallery').forEach(function (gallery) {
-      gallery.addEventListener('wheel', function (e) {
-        // Only take over if the gallery can actually scroll horizontally
-        if (gallery.scrollWidth <= gallery.clientWidth + 1) return;
-
-        // Ignore trackpad horizontal swipes (let them work natively)
-        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-
-        var atStart = gallery.scrollLeft <= 0;
-        var atEnd = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 1;
-
-        // If at an edge in the scroll direction, let the page scroll
-        if ((e.deltaY < 0 && atStart) || (e.deltaY > 0 && atEnd)) return;
-
-        e.preventDefault();
-        gallery.scrollLeft += e.deltaY;
-      }, { passive: false });
-    });
-
   </script>
 </body>
 
