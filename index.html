@@ -9,9 +9,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Isotope JS -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-  <script defer src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
   <!-- Custom Style -->
   <script>
@@ -545,14 +545,14 @@
 
     function toggle_bio() {
       var x = document.getElementById("more-bio");
-      var b = document.getElementById("bio-toggle");
+
       if (x.style.display === "none") {
         x.style.display = "inline";
-        b.textContent = "Less";
       } else {
         x.style.display = "none";
-        b.textContent = "More";
       }
+
+      update_bio_label();
     }
 
     function toggle_highlights() {
@@ -651,7 +651,7 @@
     // Apply saved language on page load
     (function () {
       var saved = localStorage.getItem('lang');
-      if (saved === 'ar') { set_lang('ar'); }
+      if (saved === 'ar') { set_lang('ar'); update_bio_label(); }
       else { update_bio_label(); }
     })();
 
