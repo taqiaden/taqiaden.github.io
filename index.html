@@ -96,6 +96,21 @@
 
             </li>
           </ul>
+          <!-- Contact form (FormBeam) -->
+          <form action="https://api.formbeam.io/f/quick-bright-tree-1714" method="POST" class="contact-form">
+            <p>
+              <input type="text" name="name" placeholder="Your Name" required>
+            </p>
+            <p>
+              <input type="email" name="email" placeholder="Your Email" required>
+            </p>
+            <p>
+              <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            </p>
+            <!-- Honeypot: hidden field to stop bots (leave empty) -->
+            <input type="text" name="honeypot" tabindex="-1" autocomplete="off" style="display:none">
+            <button type="submit">Send</button>
+          </form>
         </div>
       </div>
       <!-- ===== END CONTACT ===== -->

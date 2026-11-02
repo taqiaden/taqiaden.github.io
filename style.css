@@ -361,6 +361,60 @@ h3 a:hover {
   min-width: 0;
 }
 
+/**************************************************/
+/* Contact form (FormBeam). */
+
+.contact-form {
+  max-width: 30em;
+  margin-top: 1.5em;
+}
+
+.contact-form p {
+  margin-bottom: 0.8em;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6em 0.8em;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: 1.4;
+  box-sizing: border-box;
+  color: #150c21;
+  background: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 6em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgb(20, 110, 190);
+  box-shadow: 0 0 0 3px rgba(20, 110, 190, 0.15);
+}
+
+.contact-form button {
+  padding: 0.6em 1.5em;
+  border: none;
+  border-radius: 6px;
+  background: rgb(20, 110, 190);
+  color: #fff;
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #0f4e86;
+}
+
 
 
 /**************************************************/
