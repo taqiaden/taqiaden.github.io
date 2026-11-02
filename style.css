@@ -462,13 +462,17 @@ html[dir="rtl"] .contact-form-intro {
   text-align: right;
 }
 
+html[dir="rtl"] #intro {
+  direction: rtl;
+}
+
 html[dir="rtl"] #intro-text {
-  float: right;
+  float: none;
 }
 
 html[dir="rtl"] #intro-image {
-  float: right;
-  margin: 2em 2em 0 0;
+  float: none;
+  margin: 1em 0 0;
 }
 
 html[dir="rtl"] .contact-list li b {
@@ -689,4 +693,57 @@ html[dir="rtl"] #intro-text p:not(.lang-switch) {
 
 .contact-form button:hover {
   background: #1d4ed8;
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+.lang-btn:focus-visible,
+#bio-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .list-item.highlight,
+  .list-item.publication {
+    padding: 1em;
+  }
+
+  .list-item .thumbnail {
+    max-width: 220px;
+  }
+
+  .gallery img {
+    width: 220px;
+    height: 145px;
+  }
+
+  h1 {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
 }
