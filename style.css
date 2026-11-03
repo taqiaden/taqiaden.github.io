@@ -477,6 +477,18 @@ html[dir="rtl"] .contact-form-intro {
   text-align: right;
 }
 
+/* Keep language switch, theme toggle, and social links centered */
+#intro-text .lang-switch,
+#intro-text .theme-switch,
+#intro-text p:last-child {
+  text-align: center;
+}
+
+/* Center the theme toggle button itself */
+#intro-text .theme-switch button {
+  margin: 0 auto;
+}
+
 html[dir="rtl"] #intro {
   direction: rtl;
 }
@@ -507,12 +519,20 @@ html[dir="rtl"] .button {
   margin-left: 1em;
 }
 
-#intro-text p:not(.lang-switch) {
+/* Keep biography text aligned according to language */
+#intro-text > p:first-of-type {
   text-align: left;
 }
 
-html[dir="rtl"] #intro-text p:not(.lang-switch) {
+html[dir="rtl"] #intro-text > p:first-of-type {
   text-align: right;
+}
+
+/* Keep language switch, theme toggle, and social links centered */
+#intro-text .lang-switch,
+#intro-text .theme-switch,
+#intro-text p:last-child {
+  text-align: center !important;
 }
 
 
@@ -759,11 +779,6 @@ body {
     text-align: right;
   }
 
-   /* Center language switch and social links */
-  #intro-text .lang-switch,
-  #intro-text p:last-child {
-    text-align: center;
-  }
 
   /* Center navigation tabs */
   #filters {
