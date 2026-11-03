@@ -477,12 +477,7 @@ html[dir="rtl"] .contact-form-intro {
   text-align: right;
 }
 
-/* Keep language switch, theme toggle, and social links centered */
-#intro-text .lang-switch,
-#intro-text .theme-switch,
-#intro-text p:last-child {
-  text-align: center;
-}
+
 
 /* Center the theme toggle button itself */
 #intro-text .theme-switch button {
@@ -528,12 +523,7 @@ html[dir="rtl"] #intro-text > p:first-of-type {
   text-align: right;
 }
 
-/* Keep language switch, theme toggle, and social links centered */
-#intro-text .lang-switch,
-#intro-text .theme-switch,
-#intro-text p:last-child {
-  text-align: center !important;
-}
+
 
 
 .list-item.highlight,
@@ -988,4 +978,13 @@ html[data-theme="dark"] #theme-toggle {
 #theme-toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+/* Center language switch, theme toggle, and social links on mobile only */
+@media (max-width: 768px) {
+  #intro-text .lang-switch,
+  #intro-text .theme-switch,
+  #intro-text > p:last-child {
+    text-align: center !important;
+  }
 }
