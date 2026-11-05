@@ -153,24 +153,7 @@
       <!-- Truncated Set of Highlights (Shown by Default) -->
       <div id="main-highlights">
 
-        <!-- <div class="list-item publication" data-category="publication">
-          <a href="https://language-to-reward.github.io/" class="thumbnail">
-            <video playsinline="" muted="" autoplay="" loop="" width="180px">
-              <source src="images/language-to-rewards-teaser.mp4" type="video/mp4">
-            </video>
-          </a>
-          <div class="project-description">
-            <h3><a href="https://language-to-reward.github.io/">Language to Rewards for Robotic Skill Synthesis</a></h3>
-            <p>
-              Wenhao Yu, Nimrod Gileadi, Chuyuan Fu, Sean Kirmani, Kuang-Huei Lee, Montse Gonzalez Arenas, Hao-Tien Lewis Chiang, Tom Erez, Leonard Hasenclever, Jan Humplik, Brian Ichter, Ted Xiao, Peng Xu, Andy Zeng, Tingnan Zhang, Nicolas Heess, Dorsa Sadigh, Jie Tan, Yuval Tassa, Fei Xia<br>
-                <i>Conference on Robot Learning (CoRL) 2023</i><br>
-                <font color="49bf9"><i>&#9733; Oral Presentation, CoRL &#9733;</i></font><br>
-                <a href="https://language-to-reward.github.io/">Webpage</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                <a href="https://arxiv.org/abs/2306.08647">PDF</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                <a href="https://youtu.be/7KiKg0rdSSQ">Video</a>
-            </p>
-          </div>
-        </div> -->
+
 
         <div class="list-item highlight" data-category="highlight">
           <div class="project-description">
@@ -179,7 +162,23 @@
               <a href="https://github.com/taqiaden/GraspAgent_AnyHand" target="_blank" rel="noopener">Code</a>
               &nbsp;|&nbsp;
               <a href="https://huggingface.co/datasets/taqiaden/GraspAgent" target="_blank" rel="noopener">Dataset</a>
-
+              &nbsp;|&nbsp;
+              <a href="#" onclick="showMessage(event); return false;" style="cursor: pointer;">Paper</a>
+              <script>
+                function showMessage(event) {
+                  event.preventDefault();
+                  const newWindow = window.open('', '_blank', 'width=400,height=200');
+                  newWindow.document.write(`
+    <html>
+      <head><title>Message</title></head>
+      <body style="font-family: Arial; padding: 20px; text-align: center;">
+        <p>The paper is under peer review. If you need an initial copy from the author, please contact me. Thanks!</p>
+      </body>
+    </html>
+  `);
+                  newWindow.document.close();
+                }
+              </script>
             </p>
             <iframe width="320" height="180" src="https://www.youtube.com/embed/OhyEVtTZgt0" title="Demo 3"
               frameborder="0" loading="lazy"
@@ -195,6 +194,40 @@
           <div class="project-description">
             <h3><b>Beyond Grasping</b>, Learning Synergistic Multi-Skill Manipulation for a Real-World
               Dual-Arm Robot in Dense Clutter</h3>
+            <p>
+              <a href="#" onclick="showMessage(event); return false;" style="cursor: pointer;">Conference</a>
+              <script>
+                function showMessage(event) {
+                  event.preventDefault();
+                  const newWindow = window.open('', '_blank', 'width=400,height=200');
+                  newWindow.document.write(`
+    <html>
+      <head><title>Message</title></head>
+      <body style="font-family: Arial; padding: 20px; text-align: center;">
+        <p>The official link is not realeased yet. If you need a copy from the author, please contact me. Thanks!</p>
+      </body>
+    </html>
+  `);
+                  newWindow.document.close();
+                }
+              </script>
+              <a href="#" onclick="showMessage(event); return false;" style="cursor: pointer;">Paper</a>
+              <script>
+                function showMessage(event) {
+                  event.preventDefault();
+                  const newWindow = window.open('', '_blank', 'width=400,height=200');
+                  newWindow.document.write(`
+    <html>
+      <head><title>Message</title></head>
+      <body style="font-family: Arial; padding: 20px; text-align: center;">
+        <p>The paper is under peer review. If you need an initial copy from the author, please contact me. Thanks!</p>
+      </body>
+    </html>
+  `);
+                  newWindow.document.close();
+                }
+              </script>
+            </p>
             <iframe width="320" height="180" src="https://www.youtube.com/embed/_r1BAmj_31o" title="Demo 2"
               frameborder="0" loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -208,6 +241,8 @@
             <h3><b>GraspAgent 1.0</b>: Adversarial Continual Dexterous Grasp Learning</h3>
             <p>
               <a href="https://ieeexplore.ieee.org/abstract/document/10758247/" target="_blank" rel="noopener">Paper</a>
+              &nbsp;|&nbsp;
+              <a href="https://doi.org/10.5281/zenodo.11516242" target="_blank" rel="noopener">Dataset</a>
             </p>
             <iframe width="320" height="180" src="https://www.youtube.com/embed/xBuanLjSncA" title="Demo 1"
               frameborder="0" loading="lazy"
